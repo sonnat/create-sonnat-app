@@ -1,0 +1,14 @@
+node_modules/
+templates/
+.editorconfig
+.eslintrc
+.eslintrc.*
+.prettierrc
+.prettierrc.*
+.gitignore
+.npmignore
+tsconfig.json
+yarn.lock
+.husky/
+index.ts
+create-app.ts
