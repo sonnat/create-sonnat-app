@@ -1,5 +1,4 @@
 import Icon from "@sonnat/ui/Icon";
-import * as React from "react";
 
 const componentName = "SonnatSvgLogo";
 

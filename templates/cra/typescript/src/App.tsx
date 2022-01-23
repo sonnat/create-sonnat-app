@@ -6,7 +6,6 @@ import Divider from "@sonnat/ui/Divider";
 import Row from "@sonnat/ui/Row";
 import makeStyles from "@sonnat/ui/styles/makeStyles";
 import Text from "@sonnat/ui/Text";
-import React from "react";
 import SonnatSvgLogo from "./components/SonnatSvgLogo";
 
 const useStyles = makeStyles(
