@@ -1,9 +1,9 @@
-import Icon from "@sonnat/ui/Icon";
+import Icon, { type IconProps } from "@sonnat/ui/Icon";
 import * as React from "react";
 
 const componentName = "SonnatSvgLogo";
 
-const SonnatSvgLogo = props => {
+const SonnatSvgLogo = (props: IconProps) => {
   return (
     <Icon {...props} viewBox="0 0 24 24" title="Sonnat Design System's Logo">
       <circle cx="12" cy="12" r="12" fill="#EE3F7C" />
