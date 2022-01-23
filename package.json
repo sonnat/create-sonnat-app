@@ -6,6 +6,9 @@
   "repository": "git@github.com:sonnat/create-sonnat-app.git",
   "author": "mimshins <mostafa.sh.coderino@gmail.com>",
   "license": "MIT",
+  "files": [
+    "lib"
+  ],
   "engines": {
     "node": ">=14.0.0"
   },
@@ -17,7 +20,7 @@
     "prebuild": "rimraf lib",
     "build": "npm run build:ts",
     "postbuild": "npm run lint",
-    "lint": "tsc --project tsconfig.json --noEmit && eslint \"bin/**/*.{js,ts}\" --config .eslintrc.js --quiet --fix",
+    "lint": "tsc --project tsconfig.json --noEmit && eslint \"**/*.ts\" --config .eslintrc.js --quiet --fix",
     "predev": "rimraf lib",
     "dev": "npm run dev:watch",
     "dev:watch": "tsc -w"
@@ -30,7 +33,7 @@
     "@types/validate-npm-package-name": "^3.0.3",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
     "@typescript-eslint/parser": "^5.10.0",
-    "chalk": "^5.0.0",
+    "chalk": "^4.1.2",
     "commander": "^8.3.0",
     "cpy": "^8.1.2",
     "cross-spawn": "^7.0.3",
