@@ -109,3 +109,4 @@ figma-backup-root/
 cookies.json
 *.screenshot.*
 .DS_STORE
+.DS_Store
