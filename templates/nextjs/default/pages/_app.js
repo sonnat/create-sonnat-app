@@ -31,7 +31,7 @@ export default function App(props) {
     const sonnatServerStyles = document.getElementById("sonnat-jss-ssr");
 
     if (sonnatServerStyles)
-      sonnatServerStyles.parentElement?.removeChild(sonnatServerStyles);
+      sonnatServerStyles.parentElement.removeChild(sonnatServerStyles);
   }, []);
 
   return (
