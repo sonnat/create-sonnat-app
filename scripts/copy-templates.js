@@ -1,13 +1,11 @@
 const cpy = require("cpy");
 const path = require("path");
 
-const dest = path.join(__dirname, "lib");
+const dest = path.join(process.cwd(), "lib");
 
 void (async () => {
   await cpy("**", path.join(dest, "templates"), {
     parents: true,
-    cwd: path.join(__dirname, "templates")
+    cwd: path.join(process.cwd(), "templates")
   });
-
-  await cpy(["LICENSE", "README.md"], dest);
 })();

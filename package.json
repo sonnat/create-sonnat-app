@@ -15,12 +15,13 @@
   "scripts": {
     "build:ts": "tsc",
     "prebuild": "rimraf lib",
-    "build": "npm-run-all build:prepare build:ts",
-    "postbuild": "npm run lint",
-    "build:prepare": "node ./prepare.js",
+    "build": "npm-run-all build:copy-templates build:ts",
+    "postbuild": "npm-run-all lint prepare-release",
+    "build:copy-templates": "node ./scripts/copy-templates.js",
+    "prepare-release": "node ./scripts/prepare-release.js",
     "lint": "tsc --project tsconfig.json --noEmit && eslint \"**/*.ts\" --config .eslintrc --quiet --fix",
     "predev": "rimraf lib",
-    "dev": "npm-run-all build:prepare dev:watch",
+    "dev": "npm-run-all build:copy-templates dev:watch",
     "dev:watch": "tsc -w"
   },
   "devDependencies": {

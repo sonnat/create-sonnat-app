@@ -19,12 +19,38 @@ Set up a modern web app which is powered by Sonnat.
 ### Usage
 
 ```bash
-npx create-sonnat-app my-app
+yarn create sonnat-app <project-name> <project-template> [options]
+
+npx create-sonnat-app <project-name> <project-template> [options]
 ```
 
 **NOTE:** If you've previously installed `create-sonnat-app` globally via `npm install -g create-sonnat-app`, we recommend you uninstall the package using `npm uninstall -g create-sonnat-app` or `yarn global remove create-sonnat-app` to ensure that npx always uses the latest version.
 
 **NOTE:** `npx` comes with npm 5.2+ and higher, for older npm versions install it globally.
+
+### API
+
+```bash
+create-sonnat-app <project-directory> <template> [options]
+(valid templates: nextjs, cra)
+
+Options:
+  -V, --version       output the version number
+  --ts, --typescript  initialize as a TypeScript project. (default: false)
+  --use-npm           explicitly tell the CLI to bootstrap the app using npm.
+                      (default: false)
+  -h, --help          display help for command
+```
+
+### Examples
+
+```bash
+# With NextJS
+yarn create sonnat-app my-app nextjs
+
+# With CRA (create-react-app) and TypeScript
+yarn create sonnat-app my-app cra --typescript
+```
 
 ### Community
 
