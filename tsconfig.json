@@ -13,6 +13,7 @@
     "sourceMap": true,
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
     "noUnusedLocals": true,
     "noImplicitAny": true,
     "noUnusedParameters": true,
