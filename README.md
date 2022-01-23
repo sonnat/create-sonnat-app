@@ -1,8 +1,6 @@
 <div align="center">
-  <a href="https://www.sonnat.dev">
-    <img src="https://raw.githubusercontent.com/sonnat/sonnat-ui/next/sonnat.svg" height="128">
-    <h1 align="center">Create Sonnat App</h1>
-  </a>
+  <img src="https://raw.githubusercontent.com/sonnat/sonnat-ui/next/sonnat.svg" height="128">
+  <h1 align="center">Create Sonnat App</h1>
 </div>
 
 <div align="center">
@@ -21,16 +19,22 @@ Set up a modern web app which is powered by Sonnat.
 ```bash
 yarn create sonnat-app <project-name> <project-template> [options]
 
+# or
 npx create-sonnat-app <project-name> <project-template> [options]
 ```
+<hr />
+
+**NOTE:** To bootstrap using `yarn` we recommend running `yarn create sonnat-app <project-name> <project-template> [options]` instead of `npx`.
 
 **NOTE:** If you've previously installed `create-sonnat-app` globally via `npm install -g create-sonnat-app`, we recommend you uninstall the package using `npm uninstall -g create-sonnat-app` or `yarn global remove create-sonnat-app` to ensure that npx always uses the latest version.
 
-**NOTE:** `npx` comes with npm 5.2+ and higher, for older npm versions install it globally.
+**NOTE:** `npx` comes with npm 5.2+ and higher, for older npm versions install the CLI globally.
+
+<hr />
 
 ### API
 
-```bash
+```
 create-sonnat-app <project-directory> <template> [options]
 (valid templates: nextjs, cra)
 
