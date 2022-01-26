@@ -42,7 +42,10 @@ const createNextJsProject = (typescript: boolean) => {
     "@sonnat/icons",
     "react",
     "react-dom",
-    "next"
+    "next",
+    "autoprefixer",
+    "clean-css",
+    "postcss"
   ];
 
   const devDependencies = [
@@ -51,7 +54,10 @@ const createNextJsProject = (typescript: boolean) => {
     "eslint-config-prettier",
     "eslint-plugin-import",
     "eslint-plugin-react",
-    "eslint-plugin-react-hooks"
+    "eslint-plugin-react-hooks",
+    "postcss-flexbugs-fixes",
+    "postcss-normalize",
+    "postcss-preset-env"
   ];
 
   if (typescript) {

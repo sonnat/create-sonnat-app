@@ -7,8 +7,15 @@ import Document, {
   type DocumentContext
 } from "next/document";
 import * as React from "react";
+import PostCss from "postcss";
+import AutoPrefixer from "autoprefixer";
+import CleanCss from "clean-css";
+
+const prefixer = PostCss([AutoPrefixer]);
+const cleaner = new CleanCss();
 
 export default class MyDocument extends Document {
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   static async getInitialProps(ctx: DocumentContext) {
     const sheets = new ServerStyleSheets();
 
@@ -21,12 +28,26 @@ export default class MyDocument extends Document {
 
     const initialProps = await Document.getInitialProps(ctx);
 
+    const css = sheets.toString();
+    const sheetId = sheets.getStyleElementId();
+
+    const minifiedCSS = await (async rawCSS => {
+      // It might be undefined, e.g. after an error.
+      if (rawCSS) {
+        return cleaner.minify(
+          (await prefixer.process(rawCSS, { from: undefined })).css
+        ).styles;
+      } else return rawCSS;
+    })(css);
+
     return {
       ...initialProps,
       // Styles fragment is rendered after the app and page rendering finish.
       styles: [
         ...React.Children.toArray(initialProps.styles),
-        sheets.getStyleElement()
+        <style key={sheetId} id={sheetId}>
+          {minifiedCSS}
+        </style>
       ]
     };
   }
