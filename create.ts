@@ -66,6 +66,7 @@ const createNextJsProject = (typescript: boolean) => {
       "@types/node",
       "@types/react",
       "@types/react-dom",
+      "@types/clean-css",
       "@typescript-eslint/parser",
       "@typescript-eslint/eslint-plugin"
     );
